@@ -38,7 +38,7 @@ body {
     transition: transform 0.3s ease-in-out;
     transform: translateX(-100%);
     position: fixed;
-    height: 100%; /* Garante que a barra ocupe toda a altura da tela */
+    height: 100vh;
     top: 0;
     z-index: 1000;
 }
@@ -56,6 +56,18 @@ body {
 .sidebar.active {
     transform: translateX(0);
 }
+.close-button {
+    display: block;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
 .content {
     padding: 20px;
     margin-left: 0;
@@ -68,10 +80,13 @@ body {
     .sidebar {
         transform: translateX(0);
         position: relative;
-        height: auto; /* Permite a altura ajustar em telas grandes */
+        height: auto;
     }
     .content {
         margin-left: 250px;
+    }
+    .close-button {
+        display: none;
     }
 }
 h1 {
@@ -102,4 +117,47 @@ ul {
     padding: 5px 10px;
     border-radius: 4px;
     font-size: 0.9em;
+}
+.certificate-link {
+    color: #3498db;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    z-index: 2000;
+    text-align: center;
+}
+.popup img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+.popup-close {
+    display: block;
+    margin-top: 10px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1500;
 }

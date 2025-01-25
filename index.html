@@ -10,15 +10,31 @@
             const sidebar = document.querySelector('.sidebar');
             sidebar.classList.toggle('active');
         }
+
+        function showPopup(cert) {
+            document.querySelector('.popup img').src = cert;
+            document.querySelector('.popup').style.display = 'block';
+            document.querySelector('.overlay').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.querySelector('.popup').style.display = 'none';
+            document.querySelector('.overlay').style.display = 'none';
+        }
     </script>
 </head>
 
 <body>
+    <div class="overlay" onclick="closePopup()"></div>
+    <div class="popup">
+        <img src="" alt="Certificado">
+        <button class="popup-close" onclick="closePopup()">Fechar</button>
+    </div>
     <button class="menu-button" onclick="toggleMenu()">☰ Dados Pessoais</button>
     <div class="container">
         <div class="sidebar">
-            <button class="close-button" onclick="toggleMenu()">✖ Fechar</button>
-            <img src="./assets/img/IMG_20240705_080604591_HDR.jpg" alt="Foto de Perfil">
+            <button class="close-button" onclick="toggleMenu()">✖</button>
+            <img src="profile-placeholder.jpg" alt="Foto de Perfil">
             <p>Arthur Felipe Mattos Campos</p>
             <p>Endereço: Rua Mambucaba 600 casa 2 – Coelho Neto, Rio de Janeiro - CEP: 21510520</p>
             <p>Celular: (21) 97593-2484</p>
@@ -44,9 +60,9 @@
             <section>
                 <h2>Cursos Extracurriculares</h2>
                 <ul>
-                    <li>Inglês (CNA) - Completo</li>
-                    <li>Banco de Dados 1: Fundamentos (IFRS)</li>
-                    <li>Linux para Desenvolvedores</li>
+                    <li><span class="certificate-link" onclick="showPopup('certificado-ingles.jpg')">Inglês (CNA) - Completo</span></li>
+                    <li><span class="certificate-link" onclick="showPopup('certificado-banco.jpg')">Banco de Dados 1: Fundamentos (IFRS)</span></li>
+                    <li><span class="certificate-link" onclick="showPopup('certificado-linux.jpg')">Linux para Desenvolvedores</span></li>
                 </ul>
             </section>
 
