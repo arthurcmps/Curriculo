@@ -5,10 +5,12 @@ body {
     background-color: #f4f4f9;
     color: #333;
 }
+
 .container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    justify-content: flex-start;
     max-width: 1000px;
     margin: auto;
     background: #fff;
@@ -16,6 +18,7 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
+
 .menu-button {
     display: block;
     background-color: #2c3e50;
@@ -25,6 +28,7 @@ body {
     font-size: 1.2em;
     cursor: pointer;
     text-align: left;
+    margin: 20px;
 }
 
 .sidebar {
@@ -42,9 +46,11 @@ body {
     transition: transform 0.3s ease-in-out;
     z-index: 1000;
 }
+
 .sidebar.active {
     transform: translateX(0);
 }
+
 .close-button {
     background-color: #e74c3c;
     color: white;
@@ -54,6 +60,7 @@ body {
     cursor: pointer;
     margin-bottom: 20px;
 }
+
 .sidebar img {
     width: 80px;
     height: 80px;
@@ -61,26 +68,33 @@ body {
     margin-bottom: 20px;
     border: 2px solid #fff;
 }
+
 .content {
     margin-left: 0;
     padding: 20px;
     flex: 3 1 600px;
+    transition: margin-left 0.3s ease;
 }
+
 @media (min-width: 768px) {
     .container {
         flex-direction: row;
     }
+    
     .sidebar {
         transform: translateX(0);
         position: relative;
     }
+
     .content {
-        margin-left: 250px;
+        margin-left: 250px; /* Deixa o espaço para a sidebar */
     }
+
     .close-button {
         display: none;
     }
 }
+
 .popup {
     display: none;
     position: fixed;
@@ -94,11 +108,13 @@ body {
     z-index: 2000;
     text-align: center;
 }
+
 .popup img {
     max-width: 100%;
     height: auto;
     border-radius: 4px;
 }
+
 .popup-close {
     display: block;
     margin-top: 10px;
@@ -109,6 +125,7 @@ body {
     cursor: pointer;
     border-radius: 4px;
 }
+
 .overlay {
     display: none;
     position: fixed;
@@ -119,6 +136,7 @@ body {
     background: rgba(0, 0, 0, 0.5);
     z-index: 1500;
 }
+
 .overlay.active {
     display: block;
 }
