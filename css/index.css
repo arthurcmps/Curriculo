@@ -38,7 +38,9 @@ body {
     transition: transform 0.3s ease-in-out;
     transform: translateX(-100%);
     position: fixed;
-    height: 100%;
+    height: 100vh; /* Garante que a barra ocupe toda a altura da tela */
+    top: 0;
+    z-index: 1000;
 }
 .sidebar img {
     width: 100px;
@@ -66,7 +68,7 @@ body {
     .sidebar {
         transform: translateX(0);
         position: relative;
-        height: auto;
+        height: auto; /* Permite a altura ajustar em telas grandes */
     }
     .content {
         margin-left: 250px;
