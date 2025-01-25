@@ -41,6 +41,7 @@ body {
     height: 100vh;
     top: 0;
     z-index: 1000;
+    width: 25%;
 }
 .sidebar img {
     width: 100px;
@@ -72,6 +73,7 @@ body {
     padding: 20px;
     margin-left: 0;
     flex: 1;
+    width: 75%;
 }
 @media (min-width: 768px) {
     .menu-button {
