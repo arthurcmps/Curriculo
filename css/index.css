@@ -34,7 +34,7 @@ body {
 .sidebar {
     background-color: #2c3e50;
     color: white;
-    width: 250px; /* Sidebar com 250px de largura */
+    width: 250px;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -49,6 +49,10 @@ body {
     transform: translateX(0);
 }
 
+.profile-header {
+    position: relative;
+}
+
 .close-button {
     background-color: #e74c3c;
     color: white;
@@ -56,7 +60,9 @@ body {
     padding: 10px;
     font-size: 1em;
     cursor: pointer;
-    margin-bottom: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
 .sidebar img {
@@ -92,6 +98,14 @@ body {
     .close-button {
         display: none;
     }
+
+    /* Oculta os dados pessoais em telas grandes */
+    .sidebar .name,
+    .sidebar .address,
+    .sidebar .phone,
+    .sidebar .email {
+        display: none;
+    }
 }
 
 @media (max-width: 767px) {
@@ -100,7 +114,7 @@ body {
     }
 
     .sidebar {
-        width: 70%; /* Aumentando a largura da sidebar em dispositivos móveis */
+        width: 70%;
     }
 
     .content {
