@@ -38,7 +38,7 @@ body {
     transition: transform 0.3s ease-in-out;
     transform: translateX(-100%);
     position: fixed;
-    height: 100vh; /* Garante que a barra ocupe toda a altura da tela */
+    height: 100%; /* Garante que a barra ocupe toda a altura da tela */
     top: 0;
     z-index: 1000;
 }
