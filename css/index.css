@@ -16,13 +16,19 @@ body {
     overflow: hidden;
 }
 .menu-button {
-    display: none;
+    display: block;
     background-color: #2c3e50;
     color: white;
     border: none;
     padding: 10px;
     font-size: 1.2em;
     cursor: pointer;
+    text-align: left;
+}
+@media (min-width: 768px) {
+    .menu-button {
+        display: none;
+    }
 }
 .sidebar {
     background-color: #2c3e50;
@@ -63,9 +69,6 @@ body {
 @media (min-width: 768px) {
     .container {
         flex-direction: row;
-    }
-    .menu-button {
-        display: none;
     }
     .sidebar {
         transform: translateX(0);
