@@ -24,71 +24,70 @@
 </script>
 </head>
 <body>
-    <body>
-        <div class="overlay" onclick="closePopup()"></div>
-        <div class="popup">
-            <img src="" alt="Certificado">
-            <button class="popup-close" onclick="closePopup()">Fechar</button>
+    <div class="overlay" onclick="closePopup()"></div>
+    <div class="popup">
+        <img src="" alt="Certificado">
+        <button class="popup-close" onclick="closePopup()">Fechar</button>
+    </div>
+    <button class="menu-button" onclick="toggleMenu()">☰ Dados Pessoais</button>
+    <div class="container">
+        <div class="sidebar">
+            <button class="close-button" onclick="toggleMenu()">✖</button>
+            <img src="./assets/img/IMG_20240705_080604591_HDR.jpg" alt="Foto de Perfil">
+            <p>Arthur Felipe Mattos Campos</p>
+            <p>Endereço: Rua Mambucaba 600 casa 2 – Coelho Neto, Rio de Janeiro - CEP: 21510520</p>
+            <p>Celular: (21) 97593-2484</p>
+            <p>Email: arthur.felipe1993@gmail.com</p>
         </div>
-        <button class="menu-button" onclick="toggleMenu()">☰ Dados Pessoais</button>
-        <div class="container">
-            <div class="sidebar">
-                <button class="close-button" onclick="toggleMenu()">✖</button>
-                <img src="./assets/img/IMG_20240705_080604591_HDR.jpg" alt="Foto de Perfil">
-                <p>Arthur Felipe Mattos Campos</p>
-                <p>Endereço: Rua Mambucaba 600 casa 2 – Coelho Neto, Rio de Janeiro - CEP: 21510520</p>
-                <p>Celular: (21) 97593-2484</p>
-                <p>Email: arthur.felipe1993@gmail.com</p>
-            </div>
-            <div class="content">
-                <header>
-                    <h1>Currículo</h1>
-                </header>
-    
-                <section>
-                    <h2>Objetivo</h2>
-                    <p>Conseguir uma posição de estágio em Análise e Desenvolvimento de Sistemas para aplicar meus conhecimentos e crescer na área de TI.</p>
-                </section>
-    
-                <section>
-                    <h2>Escolaridade</h2>
-                    <ul>
-                        <li><strong>UNISUAM</strong> - Tecnólogo em Análise e Desenvolvimento de Sistemas (Cursando)</li>
-                    </ul>
-                </section>
-    
-                <section>
-                    <h2>Cursos Extracurriculares</h2>
-                    <ul>
-                        <li><span class="certificate-link" onclick="showPopup('./assets/img/Inglês.jpg')">Inglês (CNA) - Completo</span></li>
-                        <li><span class="certificate-link" onclick="showPopup('./assets/img/BD.jpg')">Banco de Dados 1: Fundamentos (IFRS)</span></li>
-                        <li><span class="certificate-link" onclick="showPopup('./assets/img/linux.jpg')">Linux para Desenvolvedores</span></li>
-                    </ul>
-                </section>
-    
-                <section>
-                    <h2>Experiência Profissional</h2>
-                    <ul>
-                        <li><strong>Grupo Hospitalar do Rio de Janeiro</strong> - Operador de Teleatendimento (19/11/2019 - Atualmente)
-                            <ul>
-                                <li>Atendimento ao cliente</li>
-                                <li>Análise de contrato e liberação de senha para procedimentos</li>
-                                <li>Abertura e acompanhamento de demandas internas</li>
-                                <li>Atendimento de suporte avançado</li>
-                                <li>Tratativa de demandas por e-mail</li>
-                            </ul>
-                        </li>
-                        <li><strong>Atento Brasil SA</strong> - Assistente de SAC II (03/06/2013 - 09/04/2019)
-                            <ul>
-                                <li>Atendimento ao cliente para análise de contrato de planos de saúde</li>
-                                <li>Abertura e acompanhamento de processos internos</li>
-                                <li>Suporte técnico para sistema de cotação de seguro Bradesco</li>
-                                <li>Tratativas de e-mail referente a pendências administrativas de seguro auto</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </section>
-            </div>
+        <div class="content">
+            <header>
+                <h1>Currículo</h1>
+            </header>
+
+            <section>
+                <h2>Objetivo</h2>
+                <p>Conseguir uma posição de estágio em Análise e Desenvolvimento de Sistemas para aplicar meus conhecimentos e crescer na área de TI.</p>
+            </section>
+
+            <section>
+                <h2>Escolaridade</h2>
+                <ul>
+                    <li><strong>UNISUAM</strong> - Tecnólogo em Análise e Desenvolvimento de Sistemas (Cursando)</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Cursos Extracurriculares</h2>
+                <ul>
+                    <li><span class="certificate-link" onclick="showPopup('./assets/img/Inglês.jpg')">Inglês (CNA) - Completo</span></li>
+                    <li><span class="certificate-link" onclick="showPopup('./assets/img/BD.jpg')">Banco de Dados 1: Fundamentos (IFRS)</span></li>
+                    <li><span class="certificate-link" onclick="showPopup('./assets/img/linux.jpg')">Linux para Desenvolvedores</span></li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Experiência Profissional</h2>
+                <ul>
+                    <li><strong>Grupo Hospitalar do Rio de Janeiro</strong> - Operador de Teleatendimento (19/11/2019 - Atualmente)
+                        <ul>
+                            <li>Atendimento ao cliente</li>
+                            <li>Análise de contrato e liberação de senha para procedimentos</li>
+                            <li>Abertura e acompanhamento de demandas internas</li>
+                            <li>Atendimento de suporte avançado</li>
+                            <li>Tratativa de demandas por e-mail</li>
+                        </ul>
+                    </li>
+                    <li><strong>Atento Brasil SA</strong> - Assistente de SAC II (03/06/2013 - 09/04/2019)
+                        <ul>
+                            <li>Atendimento ao cliente para análise de contrato de planos de saúde</li>
+                            <li>Abertura e acompanhamento de processos internos</li>
+                            <li>Suporte técnico para sistema de cotação de seguro Bradesco</li>
+                            <li>Tratativas de e-mail referente a pendências administrativas de seguro auto</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
         </div>
-    </body>
-    </html>
+    </div>
+</body>
+</html>
