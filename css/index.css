@@ -104,7 +104,7 @@ body {
     .sidebar .address,
     .sidebar .phone,
     .sidebar .email {
-        display: none;
+        display: block;
     }
 }
 
