@@ -8,15 +8,12 @@ body {
 
 .container {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: flex-start;
+    flex-wrap: nowrap;
     max-width: 1000px;
     margin: auto;
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
 }
 
 .menu-button {
@@ -27,7 +24,6 @@ body {
     padding: 10px;
     font-size: 1.2em;
     cursor: pointer;
-    text-align: left;
     margin: 20px;
 }
 
@@ -36,13 +32,12 @@ body {
     color: white;
     width: 250px;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
     position: fixed;
     height: 100vh;
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
     z-index: 1000;
+    overflow-y: auto;
 }
 
 .sidebar.active {
@@ -58,7 +53,6 @@ body {
     color: white;
     border: none;
     padding: 10px;
-    font-size: 1em;
     cursor: pointer;
     position: absolute;
     top: 10px;
@@ -77,53 +71,27 @@ body {
     margin-left: 0;
     padding: 20px;
     flex: 1;
+    height: 100vh;
+    overflow-y: auto;
     transition: margin-left 0.3s ease;
 }
 
 @media (min-width: 768px) {
+    .menu-button {
+        display: none; /* Oculta o botão "Dados Pessoais" */
+    }
+
     .container {
         flex-direction: row;
+        height: 100vh;
     }
 
     .sidebar {
-        position: relative;
-        transform: translateX(0);
-        width: 250px;
+        transform: translateX(0); /* Sidebar visível em telas grandes */
     }
 
     .content {
         margin-left: 250px;
-    }
-
-    .close-button {
-        display: none;
-    }
-
-    /* Oculta os dados pessoais em telas grandes */
-    .sidebar .name,
-    .sidebar .address,
-    .sidebar .phone,
-    .sidebar .email {
-        display: block;
-    }
-}
-
-@media (max-width: 767px) {
-    .menu-button {
-        font-size: 1.5em;
-    }
-
-    .sidebar {
-        width: 70%;
-    }
-
-    .content {
-        margin-left: 0;
-    }
-
-    .sidebar img {
-        width: 60px;
-        height: 60px;
     }
 }
 

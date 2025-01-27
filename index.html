@@ -5,23 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     <link rel="stylesheet" href="./css/index.css">
     <title>Currículo - Arthur</title>
-<script>
-    function toggleMenu() {
-        const sidebar = document.querySelector('.sidebar');
-        sidebar.classList.toggle('active');
-    }
+    <script>
+        function toggleMenu() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('active');
+        }
 
-    function showPopup(cert) {
-        document.querySelector('.popup img').src = cert;
-        document.querySelector('.popup').style.display = 'block';
-        document.querySelector('.overlay').classList.add('active');
-    }
+        function showPopup(cert) {
+            document.querySelector('.popup img').src = cert;
+            document.querySelector('.popup').style.display = 'block';
+            document.querySelector('.overlay').classList.add('active');
+        }
 
-    function closePopup() {
-        document.querySelector('.popup').style.display = 'none';
-        document.querySelector('.overlay').classList.remove('active');
-    }
-</script>
+        function closePopup() {
+            document.querySelector('.popup').style.display = 'none';
+            document.querySelector('.overlay').classList.remove('active');
+        }
+    </script>
 </head>
 <body>
     <div class="overlay" onclick="closePopup()"></div>
