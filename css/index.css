@@ -78,30 +78,38 @@ body {
 
 @media (min-width: 768px) {
     .menu-button {
-        display: none; /* Oculta o botão "Dados Pessoais" */
+        display: none; /* Oculta o botão no desktop */
     }
 
     .close-button {
-        display: none;
+        display: none; /* Não precisa do botão de fechar no desktop */
     }
 
     .container {
+        display: flex;
         flex-direction: row;
+        max-width: 1200px;
+        margin: auto;
         height: auto;
     }
 
     .sidebar {
-        position: relative;
-        transform: none; /* Remove o translate */
+        position: relative; /* Não fixa no desktop */
+        transform: none; /* Cancela o efeito retrátil */
         width: 250px;
         height: auto;
-        overflow: visible;
+        z-index: auto;
+        overflow-y: visible;
     }
 
     .content {
         margin-left: 0;
+        flex: 1;
+        height: auto;
+        overflow-y: visible;
     }
 }
+
 
 
 .popup {
