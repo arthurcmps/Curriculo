@@ -81,23 +81,28 @@ body {
         display: none; /* Oculta o botão "Dados Pessoais" */
     }
 
-    .close-button{
+    .close-button {
         display: none;
     }
 
     .container {
         flex-direction: row;
-        height: 100vh;
+        height: auto;
     }
 
     .sidebar {
-        transform: translateX(0); /* Sidebar visível em telas grandes */
+        position: relative;
+        transform: none; /* Remove o translate */
+        width: 250px;
+        height: auto;
+        overflow: visible;
     }
 
     .content {
-        margin-left: 250px;
+        margin-left: 0;
     }
 }
+
 
 .popup {
     display: none;
